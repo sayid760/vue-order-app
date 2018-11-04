@@ -1,0 +1,361 @@
+{
+    "account_address_count": 3,
+    "announcement": "",
+    "app_abandoned_info": {
+        "description": "",
+        "is_abandoned": false,
+        "scheme": "eleme://web?"
+    },
+    "book_hongbao_promotion_tips": "",
+    "business_type": 0,
+    "cart": {
+        "abandoned_extra": [
+            {
+                "category_id": 12,
+                "description": "满减活动与单品不同享",
+                "icon": {
+                    "color": "f07373",
+                    "image_hash": "",
+                    "name": "满减"
+                },
+                "id": 1683805866,
+                "max_quantity": 1,
+                "name": "在线支付立减优惠",
+                "original_price": -27,
+                "price": -27,
+                "quantity": 1,
+                "type": 102
+            }
+        ],
+        "bottom_tip": "",
+        "conditional_extra": [],
+        "deliver_amount": 56.9,
+        "deliver_time": "",
+        "discount_amount": -40,
+        "discount_amount_sum": -43,
+        "extra": {
+            "agent_fee": {
+                "category_id": 2,
+                "description": "夜间配送暂时加价，敬请谅解",
+                "icon": {
+                    "color": "9ba5b4",
+                    "image_hash": "",
+                    "name": "商家"
+                },
+                "id": -10,
+                "max_quantity": 1,
+                "name": "配送费",
+                "original_price": 5.5,
+                "price": 3.5,
+                "quantity": 1,
+                "type": 0
+            },
+            "hongbao": {
+                "category_id": 13,
+                "description": "",
+                "icon": {
+                    "color": "f1884f",
+                    "image_hash": "",
+                    "name": "惠"
+                },
+                "id": 16692273099591,
+                "max_quantity": 1,
+                "name": "超级会员专享",
+                "original_price": -5,
+                "price": -5,
+                "quantity": 1,
+                "type": 0
+            },
+            "others": [
+                {
+                    "category_id": 200,
+                    "icon": {
+                        "color": "ff7239",
+                        "name": "抢"
+                    },
+                    "id": 584856730,
+                    "max_quantity": 1,
+                    "name": "限量抢购-19.9午晚餐",
+                    "original_price": -35,
+                    "price": -35,
+                    "quantity": 1,
+                    "type": 711
+                }
+            ],
+            "packing_fee": {
+                "category_id": 102,
+                "description": "",
+                "icon": {
+                    "color": "62cb92",
+                    "image_hash": "",
+                    "name": "包装"
+                },
+                "id": -70000,
+                "max_quantity": 1,
+                "name": "餐盒",
+                "original_price": 2,
+                "price": 2,
+                "quantity": 1,
+                "type": 0
+            }
+        },
+        "group": [
+            [
+                {
+                    "act_tags": [],
+                    "activities": [],
+                    "attrs": [],
+                    "beyond_time_peroid": 0,
+                    "category_id": 1,
+                    "discount_amount": 0,
+                    "garnish": [],
+                    "group_id": 545134913,
+                    "id": 942324395,
+                    "image_hash": "c21da8134dadd55e0b12728321b9ec28png",
+                    "is_sold_out": 0,
+                    "is_understock": 0,
+                    "is_valid": 1,
+                    "min_purchase_quantity": 1,
+                    "name": "火山烤鸡【一只】+芒果汁（套餐）",
+                    "new_specs": [],
+                    "price": 54.9,
+                    "quantity": 1,
+                    "scheme": "eleme://catering?target_food_id=942324395&restaurant_id=E8510212824673793330&category_id=545134913",
+                    "sku_id": "565305283656",
+                    "specs": [],
+                    "stock": 9491,
+                    "total_discount_amount": 0,
+                    "total_price": 54.9
+                }
+            ]
+        ],
+        "id": "95d44e36df7411e89b22e4a8b6cc4aae",
+        "ingredient_group": [],
+        "is_address_too_far": 0,
+        "minimum_order_amount": 15,
+        "ontime_description_scheme": "eleme://web?url=https%3A//h5.ele.me/service/%23ontime",
+        "ontime_logo": "b3dea805fa0b4b6eb4f93c82d6266073png",
+        "ontime_promotion_text": "超时10分钟享赔付",
+        "ontime_status": 1,
+        "ontime_unavailable_reason": "当前时段已升级准时达plus，欢迎体验",
+        "original_total": 60.4,
+        "package_group": [],
+        "paymethod_id": 1,
+        "pick_up_time": "",
+        "pindan": {
+            "is_pindan": 0,
+            "lock": 0,
+            "num": 0,
+            "order_id": 0,
+            "order_token": "",
+            "owners": [],
+            "share_pindan": {
+                "description": "我要点【嘻哈雞车·烤鸡汉堡(粤垦店)】的外卖，有一起点的么？",
+                "image_path": "http://fuss10.elemecdn.com/e/f2/c7aab81192bb044708d9807389476jpeg.jpeg?w=86&h=86",
+                "title": "有人一起点外卖么？",
+                "url": "https://h5.ele.me/spell/#cartId=95d44e36df7411e89b22e4a8b6cc4aae&sig=c40288ad74edbec37fe480fc9d95a0fd&restaurant_id=163138000"
+            },
+            "unique_id": "0"
+        },
+        "restaurant": {
+            "address": "广州市天河区燕都路41号之5铺",
+            "closing_remain_seconds": 0,
+            "id": "E8510212824673793330",
+            "image_path": "ef2c7aab81192bb044708d9807389476jpeg",
+            "is_closed": 0,
+            "is_fengniao": 0,
+            "latitude": 23.159381,
+            "longitude": 113.329367,
+            "name": "嘻哈雞车·烤鸡汉堡(粤垦店)",
+            "next_business_time": "",
+            "only_use_poi": 0,
+            "phone": "18565445641",
+            "piecewise_agent_fee": {
+                "rules": [
+                    {
+                        "fee": 3.5,
+                        "price": 15
+                    }
+                ]
+            },
+            "scheme": "eleme://catering?restaurant_id=E8510212824673793330",
+            "status": 1,
+            "take_by_self": 1,
+            "type": 0
+        },
+        "service_fee_explanation": "",
+        "sig": "c40288ad74edbec37fe480fc9d95a0fd",
+        "total": 20.4,
+        "total_sum": 32.4,
+        "tying_groups": [
+            {
+                "category_id": 71,
+                "id": 701,
+                "name": "成为超级会员",
+                "price": 12,
+                "quantity": 1
+            }
+        ],
+        "tying_sku_group": [],
+        "tying_sku_total": 0
+    },
+    "current_address": {
+        "address": "金润国际",
+        "address_detail": "",
+        "city_id": 4,
+        "city_name": "",
+        "district_id": 5623,
+        "id": 282225994567,
+        "name": "宋小姐",
+        "phone": "13678905254",
+        "phone_bk": "",
+        "poi_type": 0,
+        "sex": 2,
+        "st_geohash": "ws0een2jmtg9",
+        "tag_type": 3,
+        "user_id": 13550489
+    },
+    "deliver_times": [
+        {
+            "tab": "今日（周六）",
+            "time_points": []
+        }
+    ],
+    "delivery_reach_time": "23:03",
+    "entrances": [],
+    "gift_option": {
+        "is_available": 0
+    },
+    "hongbao_info": {
+        "available_count": 1,
+        "book_available_count": 0,
+        "hongbao_sn": "20181103222413550489747386614",
+        "status": 1,
+        "status_text": "",
+        "unavailable_count": 0
+    },
+    "invoice": {
+        "is_available": false,
+        "is_hidden": true,
+        "status_text": "商家不支持开发票"
+    },
+    "is_support_ninja": 1,
+    "merchant_coupon_info": {
+        "available_count": 0,
+        "merchant_coupon_id": 0,
+        "receive_tip": {
+            "is_valid": 0
+        },
+        "status": -1,
+        "status_text": "选择红包不可使用代金券",
+        "unavailable_count": 2
+    },
+    "merchant_promise": {
+        "is_active": 0
+    },
+    "mifan_tip": "",
+    "ninja_option": {
+        "is_auto_select": 1,
+        "is_support": 1
+    },
+    "number_of_meals": {
+        "description": "便于商家带够餐具",
+        "environmental_slogan": "马上助力环保",
+        "is_available": true,
+        "notice_cancel_disposable_tableware": true,
+        "reward": "3金币"
+    },
+    "order_note_option": {
+        "is_support": 1
+    },
+    "pay_methods": [
+        {
+            "disable_reason": "",
+            "id": 1,
+            "is_online_payment": true,
+            "name": "在线支付",
+            "promotion": [],
+            "select_state": 1
+        }
+    ],
+    "pay_methods_v2": [],
+    "phone": "",
+    "shop_distance_desc": "距你1.2km",
+    "svip_mission_cell": {
+        "is_available": 0
+    },
+    "svip_subscribe_remind": {
+        "is_available": 0
+    },
+    "toast": "",
+    "tying_bottom_bar": {
+        "content": [
+            {
+                "color": "FFFFFF",
+                "font_size": 12,
+                "text": "成为超级会员，本单减5元"
+            }
+        ],
+        "icon_hash": "c7aa84b6241f335792edd15457b389cdpng",
+        "is_available": true,
+        "product_type": "supervip",
+        "tip": "成为超级会员，本单减5元"
+    },
+    "tying_products": [],
+    "tying_products_v2": [
+        {
+            "bottom_bar": {
+                "content": [
+                    {
+                        "color": "FFFFFF",
+                        "font_size": 12,
+                        "text": "成为超级会员，本单减5元"
+                    }
+                ],
+                "icon_hash": "c7aa84b6241f335792edd15457b389cdpng",
+                "is_available": true,
+                "product_type": "supervip",
+                "tip": "成为超级会员，本单减5元"
+            },
+            "category_id": 71,
+            "discount_description": [
+                {
+                    "highlight": "",
+                    "text": "每月都送你20元无门槛红包"
+                }
+            ],
+            "discount_description_v2": [
+                [
+                    {
+                        "color": "999999",
+                        "image_hash": "",
+                        "text": "每月都送你20元无门槛红包"
+                    }
+                ]
+            ],
+            "discount_total": 5,
+            "exchange_bonus": 0,
+            "icon_hash": "c7aa84b6241f335792edd15457b389cdpng",
+            "id": 701,
+            "is_new_svip_user": false,
+            "is_show": true,
+            "logo": "",
+            "marketing_icon": "",
+            "name": "成为超级会员，本单减5元",
+            "original_price": 15,
+            "pop_up": {
+                "button_text": "去加购",
+                "context_image_hash": "4da1e59e8c5060a30817544d8c359e0epng",
+                "context_text": "",
+                "is_available": false,
+                "popup_type": 0
+            },
+            "price": 12,
+            "quantity": 1,
+            "selected_description": [],
+            "sidebar_color": "D7C56F",
+            "tip_scheme": "eleme://web?navColor=%2327241f&url=https%3A//h5.ele.me/supervip/%3Fhide_footer%3Dtrue"
+        }
+    ],
+    "tying_sku_products": []
+}

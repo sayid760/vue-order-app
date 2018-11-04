@@ -1,0 +1,87 @@
+{
+    "backUrl": "https://h5.ele.me/order/#!/1227788133851677714",
+    "cashierMarketing": null,
+    "mixedPay": false,
+    "orderMemo": "<p>宋小姐(女士) 136****5254 <br>金润国际<br>-<br>火山烤鸡【一只】+芒果汁（套餐）  x1<br></p>",
+    "orderName": "嘻哈雞车·烤鸡汉堡(粤垦店)外卖订单",
+    "orderStatus": "I",
+    "payCodeInfoList": [
+        {
+            "acctAmount": null,
+            "checkPayPassword": false,
+            "collapsed": false,
+            "invalid": false,
+            "lastUsed": false,
+            "marketingInfoList": null,
+            "paidAmount": null,
+            "payChannel": "WAP",
+            "payCode": "ALI_PAY",
+            "payCodeDesc": "",
+            "payCodeTitle": "支付宝",
+            "payCodeType": "THIRD_PAY",
+            "required": false
+        },
+        {
+            "acctAmount": 0,
+            "checkPayPassword": true,
+            "collapsed": true,
+            "invalid": false,
+            "lastUsed": false,
+            "marketingInfoList": null,
+            "paidAmount": 0,
+            "payChannel": "WAP",
+            "payCode": "GCARD_PAY",
+            "payCodeDesc": "暂不支持开发票",
+            "payCodeTitle": "礼品卡余额",
+            "payCodeType": "NATIVE_PAY",
+            "required": false
+        },
+        {
+            "acctAmount": 0,
+            "checkPayPassword": true,
+            "collapsed": true,
+            "invalid": false,
+            "lastUsed": false,
+            "marketingInfoList": null,
+            "paidAmount": 0,
+            "payChannel": "WAP",
+            "payCode": "INTERNAL_ACCT",
+            "payCodeDesc": "",
+            "payCodeTitle": "账户余额",
+            "payCodeType": "NATIVE_PAY",
+            "required": false
+        },
+        {
+            "acctAmount": null,
+            "checkPayPassword": false,
+            "collapsed": true,
+            "invalid": false,
+            "lastUsed": false,
+            "marketingInfoList": null,
+            "paidAmount": null,
+            "payChannel": "WAP",
+            "payCode": "WEIXIN_PAY",
+            "payCodeDesc": "",
+            "payCodeTitle": "微信支付",
+            "payCodeType": "THIRD_PAY",
+            "required": false
+        }
+    ],
+    "payToken": "qQIABDANBgkqhkiG000BAQEFNNSCAl8wggJbAgEAAoGBAKhkjf4Zb1JSH80RMIOP",
+    "payerBelongId": 501001,
+    "payerCustomerId": "13550489",
+    "requestId": 5,
+    "requestUid": "13550489",
+    "resultCode": "000000",
+    "resultDesc": null,
+    "returnUrl": "https://h5.ele.me/ordersuccess/#user_id=13550489&order_id=1227788133851677714&restaurant_id=163138000",
+    "showMsg": null,
+    "timeoutMilliseconds": 896245,
+    "totalAmount": 20400000,
+    "transOrderInfoList": [
+        {
+            "busiOrderNo": "1227788133851677714",
+            "partnerId": 501001
+        }
+    ]
+}
