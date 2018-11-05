@@ -1,12 +1,11 @@
 <template>
   <div>
-    home
-
+    <input type="text" id="num" placeholder="请输入数量">
   </div>
 </template>
 
 <script>
-// import {post} from '@/utils/api'
+import {getFocus} from '@/api/home'
 import axios from 'axios'
 export default {
   data () {
@@ -19,10 +18,7 @@ export default {
   },
   methods: {
     fetchData () {
-      // post('http://api.douban.com/v2/movie/top250',{ start:25,count:2,}).then(res=>{
-      //   console.log(res)
-      // })
-      axios.get('/admin/manage').then(res => {
+      getFocus().then(res => {
         console.log(res)
       })
     }

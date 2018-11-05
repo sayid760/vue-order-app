@@ -28,5 +28,5 @@ export const get = (url, data) => {
 }
 
 export const post = (url, data) => {
-  return axios.post(url, data)
+  return axios.post(url, data).then(res => res.json())
 }

@@ -60,7 +60,7 @@ router.use('/api',api);
 // router.use(index);
 app.use(router.routes());   /*启动路由*/
 app.use(router.allowedMethods());
-app.listen(8000);
+app.listen(3000);
 
 
 
