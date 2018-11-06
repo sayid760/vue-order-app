@@ -9,7 +9,7 @@ var router = require('koa-router')()
 // module.exports=router.routes();
 
 // var router=require('koa-router')();
-// const DB=require('../module/db.js');
+const DB=require('../model/db.js');
 // const config=require('../module/config.js');
 // const tools=require('../module/tools.js');
 
@@ -17,21 +17,43 @@ router.get('/', (ctx) => {
   ctx.body = {'title': '这是一个api'}
 })
 
-// 购物车
-router.post('/add', async ctx => {
+// 增加就餐信息
+router.post('/addPeopleInfo', async ctx => {
   var data = ctx.request.body
-  console.log(data)
-  ctx.body = {'result': data}
+  try {
+    var uid = data.uid
+    var p_num = data.p_num
+    var p_mark = data.p_mark
+    var hasData = await DB.find('people', {'uid': uid})
+    if (hasData.length > 0) {
+      await DB.update('people', {'uid': uid},{'p_num': p_num,'p_mark': p_mark})
+    } else {
+      var result = await DB.insert('people', data)
+    }
+    ctx.body = {'success': 'true', 'msg': '增加数据成功'}
+  } catch (err) {
+    ctx.body = {'success': 'false', 'msg': '增加数据失败'}
+  }
 })
+
+
+// 就餐信息
+router.get('/peopleInfoList', async ctx => {
+  var uid = ctx.query.uid
+  var result = await DB.find('people', {'uid': uid})
+  console.log(result)
+  ctx.body = {'success': 'true', 'result': result}
+})
+
 
 // 商品列表
 router.get('/productlist', async ctx => {
   var pcate = await DB.find('productcate', {}, {'_id': 1, 'title': 1, 'pid': 1})
-  var product = await DB.find('product', {}, {'_id': 1, 'cate_id': 1, 'catename': 1, 'title': 1, 'price': 1, 'img_url': 1})
+  var product = await DB.find('product', {}, {'_id': 1, 'pid': 1, 'catename': 1, 'title': 1, 'price': 1, 'img_url': 1})
   for (var i = 0; i < pcate.length; i++) {
     pcate[i].list = []
     for (var j = 0; j < product.length; j++) {
-      if (pcate[i]._id == product[j].cate_id) {
+      if (pcate[i]._id == product[j].pid) {
         pcate[i].list.push(product[j])
       }
     }
@@ -53,7 +75,6 @@ router.get('/productcontent', async ctx => {
 // 购物车
 router.post('/addcart', async ctx => {
   var data = ctx.request.body
-
   // console.log(data);
   try {
     var uid = data.uid
@@ -77,7 +98,6 @@ router.post('/addcart', async ctx => {
 router.get('/cartlist', async ctx => {
   var uid = ctx.query.uid
   var result = await DB.find('cart', {'uid': uid})
-
   ctx.body = {'success': 'true', 'result': result}
 })
 
@@ -109,8 +129,8 @@ router.get('/decCart', async ctx => {
 // 获取购物车数量
 router.get('/cartCount', async ctx => {
   var uid = ctx.query.uid
+  // console.log(ctx)
   var result = await DB.find('cart', {'uid': uid})
-
   // console.log(result);
   var sum = 0
   for (var i = 0; i < result.length; i++) {
@@ -122,4 +142,5 @@ router.get('/cartCount', async ctx => {
 router.get('/focus', (ctx) => {
   ctx.body = {'title': '这是一个轮播图的api'}
 })
+
 module.exports = router.routes()

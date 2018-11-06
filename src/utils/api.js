@@ -24,9 +24,9 @@ import axios from 'axios'
 export const get = (url, data) => {
   return axios.get(url, {
     params: data
-  }).then(res => res.json())
+  })
 }
 
 export const post = (url, data) => {
-  return axios.post(url, data).then(res => res.json())
+  return axios.post(url, data)
 }

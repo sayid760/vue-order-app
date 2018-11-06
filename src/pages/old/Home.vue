@@ -11,7 +11,7 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      username:'11111111'
+      username: '11111111'
     }
   },
   created () {
@@ -23,9 +23,9 @@ export default {
         console.log(res)
       })
     },
-    post(){
-      let data={
-        name:this.username
+    post () {
+      let data = {
+        name: this.username
       }
       addUsername(data).then(res => {
         console.log(res)
