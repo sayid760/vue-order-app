@@ -6,16 +6,17 @@
          <div  class="start_content">			
                 
                 <header class="start_header">				
-                    <img src="../assets/images/canju.png"/> 用餐人数
+                    <img src="../assets/images/canju.png"/> 修改用餐人数
                 </header>			
                 
-                <p class="notice">请选择正确的用餐人数 ，小二马上给你送餐具</p>
+                <p class="notice">请选择正确的用餐人数</p>
                             
-                <div class="content">
+                <div class="content"> 
                     <ul class="user_list">
-                        <li v-for="(item,key) in userList" :class="{'active':key==0}" :key="key">						
+                        <li v-for="(item,key) in userList" :class="{'active':parseInt(peopleList.p_num)==key+1}">						
                             <span>{{item}}</span>
-                        </li>                                                               
+                        </li>                
+                                                              
                     </ul>
 
                     <div class="mark_input">
@@ -45,10 +46,19 @@
                     
             </div>
             
+         
            
-            <div id="start" class="start" @click="addPeopleInfo()">                
+            <div id="start_cancel" class="start_cancel">
+                <router-link to="/cart">                
+                    <span>
+                            取消
+                    </span>     
+                </router-link>               
+            </div>
+           
+            <div id="start_ok" class="start_ok" @click="addPeopleInfo()">                
                 <span>
-                        开始点菜
+                        确定修改
                 </span>                
             </div>
            
@@ -63,7 +73,7 @@
 
         //引入config
 
-    import  { addPeopleInfo } from '@/api/home'
+    import  Config from '../model/config.js'
 
 
     export default{
@@ -72,6 +82,8 @@
             return {
                  'p_num':'1人',
                  'p_mark':'',
+                 'api':Config.api,
+                 'peopleList':[],
                  'userList':[]
             }
         },
@@ -126,47 +138,59 @@
 
             }
             ,addPeopleInfo(){
+
                 //桌子id  桌子号：是扫描二维码从url获取的
-                let data={
+
+                var api=this.api+'api/addPeopleInfo';
+                this.$http.post(api,{
                     uid:'a002',                 
                     p_num:this.p_num,
                     p_mark:this.p_mark                                       
-                }
-                addPeopleInfo(data).then(res=>{
+                }).then((response)=>{
                     if(response.body.success){
-                        this.$router.push({ path: 'home' })
-                    }     
+
+                        this.$router.push({ path: 'cart' })
+                    }                                        
+                },(err)=>{
+                    console.log(err);
                 })
-                // this.$http.post(api,{
-                //     uid:'a002',                 
-                //     p_num:this.p_num,
-                //     p_mark:this.p_mark                                       
-                // }).then((response)=>{
-                                                       
-                // },(err)=>{
-                //     console.log(err);
-                // })
+
+            },
+            //获取用餐人的信息
+
+            getPeopleInfoList(){
+
+
+                var api=this.api+'api/peopleInfoList?uid=a002';
+                
+                this.$http.get(api).then(response => {
+
+                    this.peopleList=response.body.result[0];
+
+
+                    this.p_mark= this.peopleList.p_mark;
+
+                }, response => {
+                    // error callback
+                });
+
             }
         },
         mounted(){
 
-           
 
             for(var i=0;i<12;i++){
 
                 this.userList.push(i+1+'人');
             }
-          
-            
-
-            //数据没有渲染完成，就去获取dom节点
-
-            //数据渲染完成再去获取
-
+            //数据渲染完成操作dom                    
             this.$nextTick(function(){
-                    this.addChangeEnvet();
+
+                this.addChangeEnvet();
             })
-      
+
+
+            this.getPeopleInfoList();
         }
     }
 </script>
@@ -308,6 +332,80 @@
     }
     
   }
+
+
+
+
+.start_ok{
+    
+    position: fixed;
+    
+    bottom: 4rem;
+    
+    right:6rem;
+    
+    
+    width: 4rem;
+    
+    height: 4rem;
+    
+    border-radius: 50%;
+    
+    background: red;
+    color: #fff;
+    
+    span{
+        
+        display: block;
+        
+        width: 2rem;
+        
+        margin: 0 auto;
+        
+        position: relative;
+        
+        top:0.5rem;
+    }
+    a{
+        color:#fff;
+    }
+    
+  }
+  .start_cancel{
+    
+    position: fixed;
+    bottom: 4rem;
+    
+    left:6rem;
+    
+    
+    width: 4rem;
+    
+    height: 4rem;
+    
+    border-radius: 50%;
+    
+    background: red;
+    color: #fff;
+    
+    span{
+        
+        display: block;
+        
+        width: 2rem;
+        
+        margin: 0 auto;
+        
+        position: relative;
+        
+        top:1.5rem;
+    }
+    a{
+        color:#fff;
+    }
+    
+  }
+
 
 
 </style>
